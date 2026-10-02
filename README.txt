@@ -1,4 +1,4 @@
-FULLY EDITABLE V7
+FULLY EDITABLE V13
 1. Extract the ZIP first.
 2. Open index.html from the extracted folder.
 3. Click Edit Page.
@@ -11,3 +11,4 @@ This build uses a fresh editor/storage version so older saved browser data canno
 
 
 V10 FIX: Portfolio sections 3, 4 and 6 are forced to the updated built-in version even if an older portfolio page was previously saved in the browser editor. Other saved page edits remain unchanged.
+Latest deployment trigger
