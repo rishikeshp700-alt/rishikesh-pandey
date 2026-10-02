@@ -64,3 +64,7 @@
 .social-icons .social-icon span{position:absolute;left:50%;bottom:-34px;transform:translate(-50%,5px);padding:4px 8px;border-radius:7px;background:#1a202a;border:1px solid #303744;color:#e8ecf2;font-size:11px;white-space:nowrap;opacity:0;pointer-events:none;transition:.18s}
 .social-icons .social-icon:hover span{opacity:1;transform:translate(-50%,0)}.social-icons .instagram:hover{border-color:#d95d9f!important}.social-icons .youtube:hover{border-color:#ff4a3d!important}.social-icons .telegram:hover{border-color:#45aee9!important}.social-icons .email:hover{border-color:#e0a34b!important}
 @media(max-width:800px){.hero-name{font-size:32px}.social-icons{margin-bottom:26px}}
+
+
+/* PUBLIC SITE: permanently hide legacy editor controls */
+.editor-bar,#editToggle,#saveEdit,#resetEdit,.edit-toast{display:none !important;visibility:hidden !important;opacity:0 !important;pointer-events:none !important;}
