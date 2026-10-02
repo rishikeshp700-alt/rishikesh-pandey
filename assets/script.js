@@ -189,3 +189,16 @@ function applyFinalHomePolish(){
   }
 }
 document.addEventListener("DOMContentLoaded",()=>setTimeout(applyFinalHomePolish,0));
+
+
+/* FINAL LIVE FIX v14: GitHub Pages must use repository content, not browser-saved
+   portfolio HTML/blob URLs from earlier local editing sessions. */
+function clearLegacyPortfolioStorage(){
+  if(fileName()!=="portfolio.html") return;
+  try{
+    Object.keys(localStorage).forEach(k=>{
+      if(k.startsWith(EDIT_KEY_PREFIX) || k.startsWith(IMG_KEY_PREFIX)) localStorage.removeItem(k);
+    });
+  }catch(e){}
+}
+clearLegacyPortfolioStorage();
