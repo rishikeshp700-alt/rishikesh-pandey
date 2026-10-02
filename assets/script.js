@@ -82,16 +82,9 @@ function openImagePicker(img,i){
 }
 function toggleMenu(){let n=document.getElementById("nav");if(n)n.classList.toggle("open")}
 document.addEventListener("DOMContentLoaded",()=>{
- let saved=localStorage.getItem(pageKey()),main=document.querySelector("main");
- if(saved&&main)main.innerHTML=saved;
+ // Public website mode: always render the clean repository version.
+ // Editing controls and browser-saved page overrides are intentionally disabled.
  document.querySelectorAll("#year").forEach(x=>x.textContent=new Date().getFullYear());
- installImageEditor();
- let bar=document.createElement("div");bar.className="editor-bar";
- bar.innerHTML='<button id="editToggle" type="button">Edit Page</button><button class="save-edit" id="saveEdit" type="button">Save</button><button id="resetEdit" type="button">Reset</button>';
- bar.querySelector("#editToggle").addEventListener("click",toggleEditMode);
- bar.querySelector("#saveEdit").addEventListener("click",savePage);
- bar.querySelector("#resetEdit").addEventListener("click",resetPage);
- document.body.appendChild(bar);
 });
 
 function blobKey(el,i){return "media:"+fileName()+":"+i}
@@ -135,7 +128,7 @@ async function installPortfolioEditor(){
    });
  });
 }
-document.addEventListener("DOMContentLoaded",installPortfolioEditor);
+// Public website: portfolio browser editor disabled.
 
 // v10 portfolio updater: keeps the user's browser-saved edits, but refreshes only sections 3, 4 and 6.
 function applyBuiltInPortfolioUpdates(){
