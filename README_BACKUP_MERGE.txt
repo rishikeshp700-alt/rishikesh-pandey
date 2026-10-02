@@ -1,0 +1,1 @@
+Final v13 backup-merged build. Restored portable Home/About/Services edits and saved portfolio URLs from the exported browser Local Storage backup. Dead blob: URLs were intentionally not embedded because they are browser-session-only. Existing packaged portfolio assets remain intact.
